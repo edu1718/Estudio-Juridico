@@ -1,0 +1,126 @@
+.confianza {
+    background: #0f0f0f;
+    padding: 80px 20px;
+    color: #fff;
+}
+
+.confianza-container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Frase principal */
+.confianza-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #e8e8e8;
+}
+
+/* Abogado info */
+.abogado {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+}
+
+.abogado-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.abogado-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Métricas */
+.metricas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.card-metrica {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card-metrica:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.card-metrica h4 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #ffd34e;
+}
+
+/* Opiniones */
+.opiniones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.opinion-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: left;
+    position: relative;
+}
+
+.opinion-card .stars {
+    color: #ffd34e;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.opinion-card span {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Logos */
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    opacity: 0.8;
+}
+
+.logos img {
+    width: 120px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .abogado {
+        flex-direction: column;
+        text-align: center;
+    }
+}

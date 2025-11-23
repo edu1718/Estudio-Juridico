@@ -1,0 +1,351 @@
+/* ===== NAVBAR ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+
+/* === NAVBAR === */
+/* NAVBAR INICIAL: totalmente transparente */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background 0.35s ease, backdrop-filter 0.35s ease, border 0.35s ease;
+    z-index: 1000;
+}
+
+/* NAVBAR CON EFECTO GLASS AL HACER SCROLL */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.55); /* tono oscuro con transparencia */
+    backdrop-filter: blur(12px);      /* efecto vidrio */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* === NAV CONTAINER === */
+.nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === LOGO === */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: "Merriweather", serif;
+}
+.logo span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* === LINKS DESKTOP === */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+/* Efecto moderno */
+.nav-link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: .85;
+    transition: .3s ease;
+}
+.nav-link:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #25d366;
+    transition: width .3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón WhatsApp */
+.whatsapp-btn {
+    background: #25d366;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    gap: 5px;
+    opacity: 1 !important;
+    color: #000;
+    transition: .3s;
+}
+.whatsapp-btn:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+}
+
+/* HAMBURGER */
+.hamburger {
+    width: 28px;
+    height: 22px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 3001; /* MUY POR ENCIMA */
+}
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: .4s ease;
+}
+.hamburger.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* ====== MENÚ MÓVIL DESDE LA DERECHA ====== */
+@media (max-width: 900px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 270px;
+
+        background: rgba(0,0,0,0.95);
+        backdrop-filter: blur(6px);
+
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 25px;
+        gap: 22px;
+
+        transform: translateX(100%);
+        transition: transform .45s ease;
+
+        /* SE IMPONE SOBRE TODO */
+        z-index: 3000;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    width: 90%;
+    margin: auto;
+    gap: 40px;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 0 0 20px;
+    font-family: "Merriweather", serif;
+}
+
+.subtext {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* ===== BOTONES DEL HERO ===== */
+.cta-container {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Botón principal */
+.cta-principal {
+    background: #25D366;
+    padding: 12px 20px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s ease;
+    font-size: 16px;
+}
+
+.cta-principal:hover {
+    background: #1ebe5d;
+}
+
+/* Botón secundario */
+.cta-secundario {
+    background: transparent;
+    padding: 12px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    font-size: 16px;
+}
+
+.cta-secundario:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* Icono */
+.icono-ws {
+    width: 20px;
+    height: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Pantallas menores a 768px (tablets y móviles) */
+@media (max-width: 768px) {
+
+    .cta-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-principal,
+    .cta-secundario {
+        justify-content: center;
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    .icono-ws {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Móviles pequeños (menos de 480px) */
+@media (max-width: 480px) {
+
+    .cta-principal,
+    .cta-secundario {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .icono-ws {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+
+.sellos {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.sello {
+    background: #1a1a1a;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid #333;
+}
+
+.urgencia {
+    margin-top: 25px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.hero-image {
+    width: 50%;
+    height: 450px;
+    background-image: url('abogado.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+/* ===== MÓVIL: convertir en CUADRADO perfecto ===== */
+@media (max-width: 764px) {
+  .hero-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* CUADRO PERFECTO */
+  }
+
+  .hero-image img {
+    border-radius: 0; /* lo quieres cuadrado */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 1024px) {
+    .hero h1 { font-size: 32px; }
+    .subtext { font-size: 16px; }
+    .hero-image { height: 380px; }
+}
+
+@media(max-width: 764px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image {
+        width: 100%;
+    }
+
+    .hero h1 { font-size: 28px; }
+    .subtext { font-size: 15px; }
+    .hero-image { height: 320px; }
+
+    .cta-container { justify-content: center; }
+}

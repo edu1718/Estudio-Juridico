@@ -1,0 +1,42 @@
+.cta-final {
+  padding: 80px 0;
+  background: #111;
+  text-align: center;
+}
+
+.cta-final-container h2 {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.cta-final-botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-ws, .cta-form {
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.cta-ws {
+  background: #25d366;
+  color: #fff;
+}
+.cta-form {
+  background: #007bff;
+  color: #fff;
+}
+
+.cta-ws:hover, .cta-form:hover {
+  opacity: 0.9;
+}

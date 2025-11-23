@@ -1,0 +1,101 @@
+.contacto {
+  padding: 80px 0;
+  background: #0d0d0d;
+  text-align: center;
+}
+
+.contacto-container {
+  width: 90%;
+  margin: auto;
+  max-width: 650px;
+}
+
+.contacto h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.contacto-sub {
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.btn-form {
+  background: #007bff;
+  padding: 14px;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-form:hover {
+  background: #0d6efd;
+}
+
+.btn-ws {
+  background: #25d366;
+  padding: 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-ws:hover {
+  opacity: 0.9;
+}
+
+.btn-form,.btn-ws{
+  font-size: 14px
+}
+.btn-form i,
+.btn-ws i{
+  font-size: 16px;
+}
+.confidencial {
+  font-size: 13px;
+  margin-top: 10px;
+  opacity: 0.7;
+}
